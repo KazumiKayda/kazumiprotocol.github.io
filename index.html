@@ -5,38 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #0f0f14, #1a1a2e);
-      color: white;
-      font-family: 'Orbitron', sans-serif;
-      text-align: center;
-      padding: 60px 20px;
+    :root{
+      --accent:#aa55ff;
+      --bg1:#0f0f14;
+      --bg2:#1a1026;
+      --text:#ffffff;
+      --muted:rgba(255,255,255,.65);
+      --glow: rgba(170,85,255,.35);
+      --border: rgba(170,85,255,.35);
     }
-    h1 { font-size: 3em; letter-spacing: 3px; margin: 0 0 10px; }
-    p { opacity: 0.65; margin: 0 0 35px; }
+    body{
+      margin:0; min-height:100vh;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      color:var(--text);
+      font-family:'Orbitron', system-ui, sans-serif;
+      text-align:center;
+      padding:60px 20px;
+    }
+    h1{ font-size:3em; letter-spacing:3px; margin:0 0 10px; }
+    p{ margin:0 0 35px; color:var(--muted); }
 
     .links a{
       display:block; margin:12px auto; padding:12px 18px; width:260px;
-      border:2px solid #00f0ff; color:#00f0ff; text-decoration:none;
-      border-radius:10px; transition:0.25s ease;
+      border:2px solid var(--accent);
+      color:var(--accent); text-decoration:none;
+      border-radius:10px; transition:.2s ease;
     }
-    .links a:hover{ background:#00f0ff; color:#000; }
+    .links a:hover{ background:var(--accent); color:#000; }
 
-    .video {
-      margin: 40px auto 0;
-      width: 92%;
-      max-width: 900px;
-      aspect-ratio: 16 / 9;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 0 22px rgba(0,240,255,0.35);
-      border: 1px solid rgba(0,240,255,0.25);
+    .card{
+      margin:40px auto 0; width:92%; max-width:900px;
+      border-radius:14px; overflow:hidden;
+      box-shadow:0 0 22px var(--glow);
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.25);
+      backdrop-filter: blur(6px);
     }
-    iframe { width:100%; height:100%; border:0; }
+    .video{ aspect-ratio:16/9; }
+    iframe{ width:100%; height:100%; border:0; }
 
-    footer { margin-top: 55px; font-size: 0.85em; opacity: 0.4; }
+    footer{ margin-top:55px; font-size:.85em; opacity:.4; }
   </style>
 </head>
 <body>
@@ -50,9 +58,10 @@
     <a href="https://tiktok.com/@KazumiProtocol" target="_blank" rel="noopener">TikTok</a>
   </div>
 
-  <div class="video">
+  <div class="card video">
+    <!-- Replace UUYOURIDHERE with your uploads playlist ID -->
     <iframe
-      src="https://www.youtube.com/embed?listType=user_uploads&list=KazumiProtocol"
+      src="https://www.youtube.com/embed?listType=playlist&list=UUYOURIDHERE"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen>
     </iframe>
