@@ -1,74 +1,171 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>KazumiProtocol</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --accent:#aa55ff;
-      --bg1:#0f0f14;
-      --bg2:#1a1026;
-      --text:#ffffff;
-      --muted:rgba(255,255,255,.65);
-      --glow: rgba(170,85,255,.35);
-      --border: rgba(170,85,255,.35);
-    }
-    body{
-      margin:0; min-height:100vh;
-      background: linear-gradient(135deg, var(--bg1), var(--bg2));
-      color:var(--text);
-      font-family:'Orbitron', system-ui, sans-serif;
-      text-align:center;
-      padding:60px 20px;
-    }
-    h1{ font-size:3em; letter-spacing:3px; margin:0 0 10px; }
-    p{ margin:0 0 35px; color:var(--muted); }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kazumi Protocol</title>
 
-    .links a{
-      display:block; margin:12px auto; padding:12px 18px; width:260px;
-      border:2px solid var(--accent);
-      color:var(--accent); text-decoration:none;
-      border-radius:10px; transition:.2s ease;
-    }
-    .links a:hover{ background:var(--accent); color:#000; }
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
-    .card{
-      margin:40px auto 0; width:92%; max-width:900px;
-      border-radius:14px; overflow:hidden;
-      box-shadow:0 0 22px var(--glow);
-      border:1px solid var(--border);
-      background: rgba(0,0,0,.25);
-      backdrop-filter: blur(6px);
-    }
-    .video{ aspect-ratio:16/9; }
-    iframe{ width:100%; height:100%; border:0; }
+<style>
+:root{
+    --accent:#aa55ff;
+    --bg1:#0f0f14;
+    --bg2:#1a1026;
+    --text:#fff;
+    --muted:#bdb7c8;
+}
 
-    footer{ margin-top:55px; font-size:.85em; opacity:.4; }
-  </style>
+body{
+    margin:0;
+    font-family:'Orbitron',sans-serif;
+    color:var(--text);
+    background:linear-gradient(135deg,var(--bg1),var(--bg2));
+    text-align:center;
+}
+
+.hero{
+    padding:70px 20px 40px;
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:var(--muted);
+    margin-bottom:40px;
+}
+
+.latest{
+    max-width:950px;
+    margin:auto;
+    padding:25px;
+}
+
+.latest h2{
+    color:var(--accent);
+    margin-bottom:15px;
+}
+
+.video{
+    aspect-ratio:16/9;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 0 25px rgba(170,85,255,.35);
+    border:2px solid rgba(170,85,255,.4);
+}
+
+iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+
+.watch-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:16px 34px;
+    background:var(--accent);
+    color:black;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:10px;
+    transition:.2s;
+}
+
+.watch-btn:hover{
+    transform:scale(1.05);
+}
+
+.links{
+    margin:60px 0;
+}
+
+.links a{
+    display:inline-block;
+    margin:10px;
+    padding:14px 26px;
+    color:var(--accent);
+    border:2px solid var(--accent);
+    text-decoration:none;
+    border-radius:10px;
+}
+
+.links a:hover{
+    background:var(--accent);
+    color:black;
+}
+
+.about{
+    max-width:700px;
+    margin:0 auto 70px;
+    color:var(--muted);
+    line-height:1.8;
+    padding:0 20px;
+}
+
+footer{
+    opacity:.4;
+    padding:20px;
+}
+</style>
+
 </head>
+
 <body>
 
-  <h1>KAZUMI PROTOCOL</h1>
-  <p>Creator • VR • Minecraft</p>
+<div class="hero">
+    <h1>KAZUMI PROTOCOL</h1>
 
-  <div class="links">
-    <a href="https://youtube.com/@KazumiProtocol" target="_blank" rel="noopener">YouTube</a>
-    <a href="https://twitch.tv/KazumiProtocol" target="_blank" rel="noopener">Twitch</a>
-    <a href="https://tiktok.com/@KazumiProtocol" target="_blank" rel="noopener">TikTok</a>
-  </div>
+    <p class="subtitle">
+        Cyberdragon VTuber • Gaming • Storytelling
+    </p>
+</div>
 
-  <div class="card video">
-    <!-- Replace UUYOURIDHERE with your uploads playlist ID -->
-    <iframe
-      src="https://www.youtube.com/embed?listType=playlist&list=UU4I9CrZVRX8Y7JCF8UzLpYQ"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
+<div class="latest">
 
-  </div>
+    <h2>🎬 Latest Upload</h2>
 
-  <footer>© KazumiProtocol</footer>
+    <div class="video">
+        <iframe
+        src="https://www.youtube.com/embed?listType=playlist&list=UU4I9CrZVRX8Y7JCF8UzLpYQ"
+        allowfullscreen>
+        </iframe>
+    </div>
+
+    <a class="watch-btn"
+       href="https://youtube.com/@KazumiProtocol"
+       target="_blank">
+       ▶ Watch on YouTube
+    </a>
+
+</div>
+
+<div class="links">
+
+    <a href="https://youtube.com/@KazumiProtocol" target="_blank">YouTube</a>
+
+    <a href="https://twitch.tv/KazumiProtocol" target="_blank">Twitch</a>
+
+    <a href="https://tiktok.com/@KazumiProtocol" target="_blank">TikTok</a>
+
+</div>
+
+<div class="about">
+
+    <h2>About</h2>
+
+    <p>
+        Welcome to Kazumi Protocol. Join me as I tackle survival games, horror experiences, and cinematic gaming adventures. New videos and livestreams every week.
+    </p>
+
+</div>
+
+<footer>
+© Kazumi Protocol
+</footer>
 
 </body>
 </html>
